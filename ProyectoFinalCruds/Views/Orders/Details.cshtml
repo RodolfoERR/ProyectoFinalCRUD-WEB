@@ -1,0 +1,49 @@
+﻿@model ProyectoFinalCruds.Models.Orders
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Order ID
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.ORDER_ID)
+        </dt>
+        <dt class="col-sm-2">
+            Status
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.STATUS)
+        </dt>
+        <dt class="col-sm-2">
+            Customer
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.NAME)
+        </dt>
+        <dt class="col-sm-2">
+            Salesman
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.SALESMAN_ID)
+        </dt>
+        <dt class="col-sm-2">
+            Order Date
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.ORDER_DATE)
+        </dt>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ORDER_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
